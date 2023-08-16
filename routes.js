@@ -41,3 +41,15 @@ const requestHandler = (req, res) => {
 };
 
 module.exports = requestHandler;
+
+//can also do this ^ with an object:
+// module.exports = {
+//   handler:requestHandler,
+//   someText:"hard-coded text"
+// }
+//in app.js, "routes" would be the object, not the function, I'd have to do:
+//const server  = http.createServer(routes.handler);
+
+//Another way:
+//module.exports.handler = requestHandler;
+//module.exports.someText = "hard-coded text";
